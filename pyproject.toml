@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ciso-assistant-ai-agent-security-connector"
+version = "0.1.0"
+description = "Independent CISO Assistant connector for AI agent security evidence, production-readiness benchmarks, KPIs, findings, and unit economics."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "Ahmed Hassan"}]
+keywords = [
+  "CISO Assistant", "AI agent security", "GRC automation", "continuous evidence",
+  "AI governance", "MCP security", "compliance automation", "security metrics"
+]
+
+[project.scripts]
+ca-agent-connector = "ca_agent_connector.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ca_agent_connector*"]
